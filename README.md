@@ -1,7 +1,7 @@
 # yogic-startpage-jekyllized
-[![ruby version 2.3.0](https://img.shields.io/badge/ruby-2.3.0-blue.svg)][https://www.ruby-lang.org/en/downloads/releases/][![Donate](https://img.shields.io/badge/paypal-donate-blue.svg)][1]
+[![ruby version 2.3.0](https://img.shields.io/badge/ruby-2.3.0-blue.svg)][https://www.ruby-lang.org/en/downloads/releases/]
 
-#### If you would like to see a mobile version of this project please consider giving a :star: or
+#### If you would like to see a mobile version of this project please consider giving a :star: or [![Donate](https://img.shields.io/badge/paypal-donate-blue.svg)][1]
 
 ## Getting Started
 Clone or fork this repo and change the `url` and `puburl` in `_config.yml`
@@ -17,7 +17,7 @@ $ brew install rbenv
 ```
 
 ### Ruby and rbenv
-After you have rbenv installed, `cd` to your Jekyll site's directory, and install a Ruby version. This theme was tested on **2.4.0**:
+After you have rbenv installed, `cd` to your Jekyll site's directory, and install a Ruby version. This theme was tested on **2.3.0**:
 ```
 # list available versions:
 $ rbenv install -l
@@ -33,13 +33,13 @@ $ rbenv versions
 ```
 
 ### installing Gems
-With rbenv **You don't need to SUDO**, but we do need to install *Bundler*:
+With rbenv **You don't need to SUDO**, but we do need to install **Bundler**:
 ```
 $ gem install bundler
 ```
-*Bundler* tracks dependencies on a per-project basis, it is particularly useful if you need to run different versions of Jekyll in different projects, or if you don’t want to install Jekyll at the system or user level. *If you are using Bundler for the first time, please read now it is configured [here](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)*
+*Bundler* tracks dependencies on a per-project basis, it is particularly useful if you need to run different versions of Jekyll in different projects, or if you don’t want to install Jekyll at the system or user level. **If you are using Bundler for the first time, please read now it is configured [here](https://jekyllrb.com/tutorials/using-jekyll-with-bundler/)**
 
-*Optionally* to install our dependencies in an isolated environment, and ensuring they don't conflict with other gems in your system we can get gems installed into `./vender/bundle/` by:
+**Optionally** to install our dependencies in an isolated environment, and ensuring they don't conflict with other gems in your system we can get gems installed into `./vender/bundle/` by:
 ```
 bundle install --path vendor/bundle
 ```
@@ -64,3 +64,4 @@ go to [`localhost:4000`][6] in your browser to see your site.
 [4]: http://bundler.io/
 [5]: http://idratherbewriting.com/documentation-theme-jekyll/mydoc_about_ruby_gems_etc.html
 [6]: http://localhost:4000
+[7]: http://yogi-john.github.io/yogic-startpage-jekyllized
