@@ -1,5 +1,5 @@
 # yogic-startpage-jekyllized
-[![ruby version 2.3.0](https://img.shields.io/badge/ruby-2.3.0-blue.svg)][https://www.ruby-lang.org/en/downloads/releases/]
+[![ruby version 2.3.0](https://img.shields.io/badge/ruby-2.3.0-blue.svg)](https://www.ruby-lang.org/en/downloads/releases/)
 
 #### If you would like to see a mobile version of this project please consider giving a :star: or [![Donate](https://img.shields.io/badge/paypal-donate-blue.svg)][1]
 
