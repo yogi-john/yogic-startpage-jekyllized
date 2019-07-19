@@ -1,13 +1,23 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="utf-8">
-        <title>{{ page.title }}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
+    {% include head.html %}
 
-        {{ content }}
+    {% assign bg_url = site.background.url %}
+    {% if page.background %}
+      {% assign bg_url = page.background %}
+    {% endif %}
+    {% if site.background.daily %}
+      {% assign bg_url = bg_url | append: '/daily' %}
+    {% endif %}
 
+    <body style="background-image:url('{{ bg_url }}'); background-repeat: no-repeat; background-size: cover; font-family: {{ site.fonts.body }}">
+      <div id="wrapper">
+        {% include header.html %}
+
+        {% include _menu.html %}
+
+        {% include _search.html %}
+
+      </div>
     </body>
 </html>

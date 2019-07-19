@@ -18,7 +18,7 @@ function dropdownToggle(arg1){
 window.onclick= function(event){
     if (!event.target.matches('.title')){
 	if (event.target.parentNode.matches('.link') && !settings.navigation.menu_auto_close){
-	    // menu auto close? 
+	    // menu auto close?
 	    return;
 	}
 
@@ -26,7 +26,7 @@ window.onclick= function(event){
 	var i;
 	for (i = 0; i < dropdowns.length; i++){
 	    var openDropdown = dropdowns[i];
-	    
+
 	    //console.log("closing link "+ i);
 	    if (openDropdown.style.display== 'block'){
 		openDropdown.style.display= 'none';
@@ -35,11 +35,13 @@ window.onclick= function(event){
     }
 }
 
+/***** Most of this should be deprecated code *****/
+
 /*  Get Links  *\
 \*=============*/
 $(document).ready(function() {
 	var shortcuts = {};
-		
+
 	function ProcessLinks( data ){
 	    // this is the callback function
 	    var linkString = data;
@@ -101,12 +103,12 @@ $(document).ready(function() {
 		var lineArray = line.split(" || ");
 		var url = lineArray[0];
 		var title = lineArray[1];
-		
+
 		var icon = "";
 		if (lineArray[3]) {
 			icon = lineArray[3];
 		}
-		
+
 		/*  Add to shortcuts array *\
 		\*=========================*/
 		if(lineArray[2]) {
@@ -117,7 +119,7 @@ $(document).ready(function() {
 		\*=====================================*/
 		var iconHtml = '';
 		if (settings.icons.showIcons && icon) {
-			iconHtml = '<img src="' + icon + '"/>'; 
+			iconHtml = '<img src="' + icon + '"/>';
 		}
 
 		/*  Add HTML code  *\
@@ -136,18 +138,18 @@ $(document).ready(function() {
 	    html += '<div class="clear"></div>';
 	    //$('#bm').append(html);
 	    $('#bm').html(html);
-	    
+
 	    if (settings.fonts.toUpper){
 		$('.title').css('text-transform','uppercase');
 	    }
-	    
+
 	    /*  Keybindings  *\
 	    \*===============*/
 
 	    var typed = '';
 	    var shortcutArray = Object.keys(shortcuts);
 	    var typedDate = new Date();
-		
+
 	    // Check if we typed a keybinding
 	    function hasSubstring(element) {
 		var index = typed.indexOf(element);
@@ -170,7 +172,7 @@ $(document).ready(function() {
 			});
 		    var nowDate = new Date();
 		    var diffMs = (nowDate - typedDate);
-		    if (diffMs > 1000) {	
+		    if (diffMs > 1000) {
 			typed = String.fromCharCode(e.which);
 		    } else {
 			typed = typed + String.fromCharCode(e.which);
@@ -180,7 +182,7 @@ $(document).ready(function() {
 		});
 
 	}
-	
+
 	/* The CALL! *\
 	\*===========*/
 	var link_path = settings.links_path;

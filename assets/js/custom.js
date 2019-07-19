@@ -1,7 +1,7 @@
 /* Background, Weather, Time, and Search setup *\
 \*=============================================*/
 
-$(document).ready(function(){		
+$(document).ready(function(){
 	//Background image
 	// sourced from unsplash.com; reference source.unsplahs.com
 	// background got to be dark for the styling/ fonts are light in color
@@ -29,12 +29,14 @@ $(document).ready(function(){
 	    bgURL= bgURL + '/daily';
 	}
 
+	/*  JHO: Moved Background code to Jekyll
 	$('body').css({
 		'background-image':'url('+ bgURL +')',
 		'background-repeat':'no-repeat',
 		'background-size': 'cover'
 	});
-	
+	*/
+
    	//WEATHER
 	var bolShowWeather= settings.weather.show;
 	var bolGeoLocate= settings.weather.geolocate;
@@ -55,13 +57,13 @@ $(document).ready(function(){
 			html = '<h2 class="weatherHead"><i class="wi wi-yahoo-'+weather.code+'"></i> '+weather.temp+'&deg;'+weather.units.temp+'</h2>';
 			html += '<ul class="weatherDetail"><li>'+weather.city+', '+weather.region+'</li>';
 			html += '<li class="currently">'+weather.currently+'</li></ul>';
-			
+
 			var wLink = settings.weather.link;
 			if(wLink!=''){
-			    html = '<a href="'+ wLink +'" target="_blank" title="Check out the weather at '+ wLink.split("//")[1] +'">' + html;    
+			    html = '<a href="'+ wLink +'" target="_blank" title="Check out the weather at '+ wLink.split("//")[1] +'">' + html;
 			    html += '</a>';
 			}
-			
+
 			$("#weather").html(html);
 		    },
 			error: function(error) {
@@ -69,7 +71,7 @@ $(document).ready(function(){
 		    }
 		});
 	}
-	
+
 	//TIME
 	function startTime() {
 		var today=new Date();
@@ -78,15 +80,15 @@ $(document).ready(function(){
 		var s=today.getSeconds();
 		var days = ['Sun','Mon','Tues','Wednes','Thurs','Fri','Satur'];
 		var months = ['Jan','Feb','Mar','Apr','May','Jun','July','Aug','Sep','Oct','Nov','Dec'];
-		
+
 		m = checkTime(m);
 		h = checkTime(h);
 		s = checkTime(s);
-		
+
 		if(!settings.clock.IsMilitary){
 		    s = today.getHours()>12? s+'<p>pm</p>' : s+'<p>AM</p>';
 		    h = h>12? parseInt(h)-12: h ;
-		    
+
 		    $('#time').css('font-size','3em');
 		}
 
@@ -94,19 +96,19 @@ $(document).ready(function(){
 		//$('#time').html(h+'<span>:</span>'+m);
 		$('#day').html(days[today.getDay()]+'day');
 		$('#date').html(months[today.getMonth()]+' '+today.getDate()+', '+today.getFullYear());
-		
+
 		setTimeout(function(){startTime()},500);
 	}
 
 	function checkTime(i) {
-		i=i<10? i='0'+i:i; 
+		i=i<10? i='0'+i:i;
 		return i;
 	}
-	
+
 	$('#time').html(startTime());
-	
+
 	//SEARCH
-	
+
 	// print it first then mess with it
 	printSearchEng();
 	setupEngineList();
@@ -115,12 +117,12 @@ $(document).ready(function(){
 	    $('#currtype a').click(function(e){
 		    e.preventDefault();
 		});
-	    
+
 	    $('#curreng a').click(function(e){
 		    e.preventDefault();
 		});
 	}
-	
+
 	function setupEngineList(){
 	    $('#search .engine .sel').click(function(e){
 		    e.preventDefault();
@@ -129,7 +131,7 @@ $(document).ready(function(){
 
 		    $(this).html(ce);
 		    $('#curreng').html(se);
-		    
+
 		    var isSearch = $('#currtype a').html() =='M';
 		    if (isSearch){ //set search engine source
 			var searchUrl = $('#curreng a').attr('href');
@@ -158,7 +160,7 @@ $(document).ready(function(){
  		    isCurr= true;
  		}
  		strHTML += writeSearchOpt(strURL, strID, strLabel, isCurr);
-		
+
  		if (isCurr){
  		    strHTML += '<ul class="sub">';
 		}
@@ -166,7 +168,7 @@ $(document).ready(function(){
 	    strHTML += '</ul></li>';
 	    $('#search .engine').html(strHTML);
 	}
-	
+
 
 	function writeSearchOpt(strURL, strID, strLabel, isCurr){
 	    var strOutput = '<a href="' + strURL + '" id="' + strID + '">' + strLabel + '</a>';
@@ -205,7 +207,7 @@ $(document).ready(function(){
 	    if( settings.navigation.newWindow){
 		$('#search').attr('target', '_blank');
 	    }
-	    
+
 	    // give focus
 	    if (settings.search.focusSearch){
 		$('#search #query').focus();
@@ -214,13 +216,13 @@ $(document).ready(function(){
 	    // override search engine click
 	    deactivateSearchClick();
 	}
-	
+
 	// clear search box after search (wait for 1 sec)
 	$('#search').on('submit',function(e){
 		var QueryObj = $('#search #query');
 		console.log('Searched for "'+ QueryObj.val() +'"');
 		setTimeout(function(){
-			QueryObj.val('');			
+			QueryObj.val('');
 		    }, 1000);
 	    });
 
@@ -234,10 +236,10 @@ $(document).ready(function(){
 		var ct = $('#currtype').html();
 		var st = $(this).html();
 		var wasEng = $('#currtype a').html()=='M';
-		
+
 		$(this).html(ct);
 		$('#currtype').html(st);
-		
+
 		if (wasEng){
 		    printLinkSources();
 		    setupEngineList();
@@ -249,7 +251,7 @@ $(document).ready(function(){
 		    console.log('Search Engine list loaded.');
 		}
 	});
- 	
+
 	function printLinkSourceToggle(){
  	    var arrLinks = settings.links_path;
 	    var strHTML = '<li class="first"><p id="currtype"><a href="#">M</a></p>';
@@ -284,11 +286,11 @@ $(document).ready(function(){
 	    var strLinksFont= settings.fonts.links;
 	    $('body').css('font-family', strBodyFont);
 	    $('#bm').css('font-family', strLinksFont);
-	    
+
 	}
-	styleFonts();
-	
+	//styleFonts();
+
 	// PAGE TITLE
-	$('#fulltime #title').html(settings.title.default);
-	$('title').html(settings.title.add_symbol +' '+ settings.title.default);
+	// $('#fulltime #title').html(settings.title.default);
+	// $('title').html(settings.title.add_symbol +' '+ settings.title.default);
 });

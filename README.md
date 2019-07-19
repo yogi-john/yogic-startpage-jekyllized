@@ -58,6 +58,12 @@ $ bundle exec jekyll serve --watch    # the watch flag looks for real-time chang
 ```
 go to [`localhost:4000`][6] in your browser to see your site.
 
+### To-Do
+- [ ] get average color and set font to contrast
+- [ ] make it responsive
+- [ ] fix weather function
+- [ ] day vs night background function?
+
 [1]: https://paypal.me/ohjho
 [2]: https://github.com/rbenv/rbenv
 [3]: https://brew.sh/

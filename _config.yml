@@ -1,1 +1,118 @@
-markdown: rdiscount
+# ASCII-Font › http://patorjk.com/software/taag/#p=display&f=Slant&t=Phlow
+#
+#      _____ _ __          _____      __  __  _
+#     / ___/(_) /____     / ___/___  / /_/ /_(_)___  ____ ______
+#     \__ \/ / __/ _ \    \__ \/ _ \/ __/ __/ / __ \/ __ `/ ___/
+#    ___/ / / /_/  __/   ___/ /  __/ /_/ /_/ / / / / /_/ (__  )
+#   /____/_/\__/\___/   /____/\___/\__/\__/_/_/ /_/\__, /____/
+#                                                 /____/
+#
+
+title:              JohnHo.ca
+description:        Yogic Startpage by JHO
+header_symbol:      "&#2384"
+#reading_time:       true
+#words_per_minute:   200
+logo:               'assets/img/logo_jho.png'
+#nav_about_img:      'assets/img/about/thn_headshot1.jpg'
+#random_bg:          false     # if true, 'background' below will be ignored and data/random_background will be looked at install.
+background:
+  url: 'https://source.unsplash.com/collection/3366070'  # Default if none specified in Page
+  daily: False
+fonts:
+  body: 'Clear Sans'
+  links: 'Trebuchet MS'
+#in_prod:            false   #Set this to false remove most blogging functionality; making it mostly just a landing page
+#tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
+#locale:             en_US
+url:                '' #https://ohjho.github.io
+baseurl:	    	    "" #/yogic-startpage-jekyllized
+
+
+#
+#        __     __         ____   _____      __  __  _
+#       / /__  / /____  __/ / /  / ___/___  / /_/ /_(_)___  ____ ______
+#  __  / / _ \/ //_/ / / / / /   \__ \/ _ \/ __/ __/ / __ \/ __ `/ ___/
+# / /_/ /  __/ ,< / /_/ / / /   ___/ /  __/ /_/ /_/ / / / / /_/ (__  )
+# \____/\___/_/|_|\__, /_/_/   /____/\___/\__/\__/_/_/ /_/\__, /____/
+#                /____/                                  /____/
+#
+
+permalink:          /:title/
+markdown:           kramdown
+highlighter:        rouge
+kramdown:
+  auto_ids:         true
+  footnote_nr:      1
+  entity_output:    as_char
+  toc_levels:       1..6
+  enable_coderay:   false
+mathjax:            true
+sass:
+  sass_dir:         _sass
+  style:            compressed
+
+
+#
+#    ______                                     __
+#   / ____/___  ____ ___  ____ ___  ___  ____  / /______
+#  / /   / __ \/ __ `__ \/ __ `__ \/ _ \/ __ \/ __/ ___/
+# / /___/ /_/ / / / / / / / / / / /  __/ / / / /_(__  )
+# \____/\____/_/ /_/ /_/_/ /_/ /_/\___/_/ /_/\__/____/
+#
+#
+
+disqus_shortname:   #taylantatli
+
+#
+#
+#    _____            _       __
+#   / ___/____  _____(_)___ _/ /
+#   \__ \/ __ \/ ___/ / __ `/ /
+#  ___/ / /_/ / /__/ / /_/ / /
+# /____/\____/\___/_/\__,_/_/
+#
+#
+# see _data/social_media.yml
+
+google:
+  #plus:            #username
+  analytics:        UA-113473508-1
+  #verify:
+  #ad-client:
+  #ad-slot:
+#bing-verify:
+email:				      iam@johnho.ca
+#stackoverflow:     123456/username   from a "http://stackoverflow.com/users/123456/username" link
+
+#
+#
+#    ______
+#   / ____/__  ____ ___  _____
+#  / / __/ _ \/ __ `__ \/ ___/
+# / /_/ /  __/ / / / / (__  )
+# \____/\___/_/ /_/ /_/____/
+#
+#
+# > jekyll-mentions: https://github.com/jekyll/jekyll-mentions
+
+# gems:
+#   - jekyll-mentions
+#   - jekyll-feed
+#   - jekyll-sitemap
+#   - jekyll-gist
+#
+# jekyll-mentions:
+#     base_url: https://github.com
+
+#
+#
+#     ______          __          __        __    _      __
+#    / ____/  _______/ /_  ______/ /__     / /   (_)____/ /_
+#   / __/ | |/_/ ___/ / / / / __  / _ \   / /   / / ___/ __/
+#  / /____>  </ /__/ / /_/ / /_/ /  __/  / /___/ (__  ) /_
+# /_____/_/|_|\___/_/\__,_/\__,_/\___/  /_____/_/____/\__/
+#
+#
+
+# exclude: [README.md, Gemfile, Gemfile.lock, node_modules, gulpfile.js, package.json, _site, src, vendor, CNAME, LICENSE, Rakefile]

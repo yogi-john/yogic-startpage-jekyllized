@@ -1,0 +1,19 @@
+<header>
+  <div id="fulltime">
+    {% if site.header_symbol %}
+      <h1 style="font-size:1.3em">{{ site.header_symbol }}</h1>
+    {% endif %}
+
+    {% assign desc = site.description %}
+    {% if page.description %}
+      {% assign desc = page.description %}
+    {% endif %}
+
+    <h1 id="title">{{ desc }}</h1>
+    <h1 id="time"></h1>
+    <h2 id="day"></h2>
+    <h3 id="date"></h3>
+  </div>
+  <div id="weather"></div>
+  <div class="clear"></div>
+</header>

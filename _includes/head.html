@@ -1,0 +1,13 @@
+<head>
+<meta charset="UTF-8">
+{% assign big_title = site.title %}
+{% if page.title %}
+  {% assign big_title = page.title %}
+{% endif %}
+{% if site.header_symbol %}
+  {% assign big_title = site.header_symbol | append: ' ' | append: big_title %}
+{% endif %}
+<title>{{ big_title }}</title>
+
+{% include scripts.html %}
+</head>
