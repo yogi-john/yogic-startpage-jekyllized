@@ -1,0 +1,6 @@
+- name: home
+  icon:
+  url: /index
+- name: another page of links
+  icon:
+  url: /pages/demo

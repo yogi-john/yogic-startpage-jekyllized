@@ -16,13 +16,13 @@
   </ul>
   <div class="clear"></div>
   -->
-
+  {% for category in page.categories %}
     <ul>
-      <!--<li class = "title" onclick="dropdownToggle(this)"><i class="fa fa-caret-square-o-down" aria-hidden="true" title ='other links'></i></li>-->
-      <li class = "title" onclick="dropdownToggle(this)"> menu</li>
-      {% for link in site.data.nav %}
-        <li class="link"><a href="{{ link.url | prepend: site.baseurl }}"> {{ link.name }}</a></li>
+      <li class = "title" onclick="dropdownToggle(this)"> {{ category.name }}</li>
+      {% for link in category.links %}
+        <li class="link"><a href="{{ link.url }}"> {{ link.name }}</a></li>
       {% endfor %}
     </ul>
+  {% endfor %}
   <div class = "clear"></div>
 </section>
