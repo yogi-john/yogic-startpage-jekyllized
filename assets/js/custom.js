@@ -228,8 +228,10 @@ $(document).ready(function(){
 
 	setupSearch();
 
+	/* JHO: Moving the Link Source menu to somewhere else
 	// LINKS SOURCE
 	printLinkSourceToggle(); // must print it first before we can mess with click events
+	*/
 
 	$('#search .type .sel').click(function(e){
 		e.preventDefault();

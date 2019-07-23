@@ -1,3 +1,5 @@
+<!-- need to duplicate and change css styling for #bm for menu -->
+
 <section id="bm" style ="font-family:{{ site.fonts.links }};" >
   <!-- This is an example of what would be output by js/menu.js:
   <ul>
@@ -19,7 +21,7 @@
 
     <ul>
       <!--<li class = "title" onclick="dropdownToggle(this)"><i class="fa fa-caret-square-o-down" aria-hidden="true" title ='other links'></i></li>-->
-      <li class = "title" onclick="dropdownToggle(this)"> menu</li>
+      <li class = "title" onclick="dropdownToggle(this)" title = "link to another world"> menu</li>
       {% for link in site.data.nav %}
         <li class="link"><a href="{{ link.url | prepend: site.baseurl }}"> {{ link.name }}</a></li>
       {% endfor %}
