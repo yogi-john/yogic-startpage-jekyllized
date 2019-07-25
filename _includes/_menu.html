@@ -19,12 +19,24 @@
   <div class="clear"></div>
   -->
 
-    <ul>
+    <ul {% if site.menu_list.use_icon %} id='icon-list' {% endif %}>
       <!-- Gotta fix this: now we are clicking to the emptiness next to the icon -->
-      <li class = "title" onclick="dropdownToggle(this)" title ='links to other links'><i class="fa fa-bars" aria-hidden="true"></i></li>
+      <li class = "title" onclick="dropdownToggle(this)" title ='links to other links'>
+        <i class="fa fa-bars" aria-hidden="true"></i>
+      </li>
       <!-- <li class = "title" onclick="dropdownToggle(this)" title = "link to another world"> menu</li> -->
       {% for link in site.data.nav %}
-        <li class="link"><a href="{{ link.url | prepend: site.baseurl }}"> {{ link.name }}</a></li>
+
+        {% assign link_display = link.name %}
+        {% if site.menu_list.use_icon %}
+          {% capture link_display %}
+          <i class = "fa {{ link.icon }} fa-lg" aria-hidden="true"></i>
+          {% endcapture %}
+        {% endif %}
+
+        <li class="link" {% if site.menu_list.use_icon %} id='icon-list' title = '{{ link.name }}'{% endif %}>
+          <a href="{{ link.url | prepend: site.baseurl }}"> {{ link_display }}</a>
+        </li>
       {% endfor %}
     </ul>
   <div class = "clear"></div>

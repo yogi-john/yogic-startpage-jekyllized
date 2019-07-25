@@ -1,6 +1,12 @@
+# icon here is the Font AWesome 4 reference
+# Font Awesome 4 icons: https://fontawesome.com/v4.7.0/icon/home
+
 - name: home
-  icon:
+  icon: fa-home
   url: /index
-- name: another page of links
-  icon:
+- name: demo page 1
+  icon: fa-bolt
   url: /pages/demo
+- name: demo page 2
+  icon: fa-bomb
+  url: /pages/demo2

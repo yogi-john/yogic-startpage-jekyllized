@@ -4,15 +4,21 @@ function dropdownToggle(arg1){
     var nCount= arg1.parentNode.childNodes.length;
     for (i = 0; i < nCount; i++){
 	var iNode= arg1.parentNode.childNodes[i];
-	if( iNode.className == 'link'){
+  if ( iNode.className == 'link' && iNode.id == 'icon-list'){
+    if (iNode.style.display== 'none'){
+        iNode.style.display= 'inline-block';
+       }else{
+         iNode.style.display= 'none';
+          }
+  } else if( iNode.className == 'link'){
 	    //console.log('showing link '+ i);
-	    if (iNode.style.display== 'none'){
-		iNode.style.display= 'block';
-	    }else{
-		iNode.style.display= 'none';
-	    }
+	     if (iNode.style.display== 'none'){
+		       iNode.style.display= 'block';
+	        }else{
+            iNode.style.display= 'none';
+	        }
 	}
-    }
+  }
 }
 
 window.onclick= function(event){

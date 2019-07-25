@@ -228,6 +228,15 @@ a:active{
 	margin-left:2%;
 }
 
+/* ICON-LIST STYLE */
+#icon-list .link{
+	//display: inline-block;
+	margin: 8px;
+}
+#icon-list a:hover{
+	transform: scale(1.5);
+}
+
 /* SEARCH STYLES */
 #search{
 	margin-top:5%;
