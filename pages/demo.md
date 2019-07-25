@@ -1,7 +1,7 @@
 ---
 layout: default
-title: Welcome to Yogic Startpage
-description: Here & Now
+title: Demo Page 2
+description: Some More Links!
 background: https://source.unsplash.com/collection/407887
 categories:
   - name: About
