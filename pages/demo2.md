@@ -3,6 +3,13 @@ layout: default
 title: Demo 2
 description: I Love Links
 background: https://source.unsplash.com/collection/3491181
+# Other Cool unsplash collections:
+# 2411320/trend-extreme-neon
+# 1127828/amoled-wallpapers
+# 1538150/milkyway
+# 827743/landscape
+# 573009/micro-worlds
+# 552980/orange-red
 categories:
   - name: Reference
     links:
