@@ -18,7 +18,14 @@
   -->
   {% for category in page.categories %}
     <ul>
+      {% if category.icon %}
+      <li class = "title" onclick="dropdownToggle(this)" title="{{ category.name }}">
+        &nbsp;&nbsp;&nbsp;<i class="fa {{ category.icon }}" aria-hidden="true"></i>
+      </li>
+      {% else %}
       <li class = "title" onclick="dropdownToggle(this)"> {{ category.name }}</li>
+      {% endif %}
+
       {% for link in category.links %}
         <li class="link"><a href="{{ link.url }}"> {{ link.name }}</a></li>
       {% endfor %}

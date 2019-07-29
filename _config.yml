@@ -23,6 +23,8 @@ background:
 fonts:
   body: 'Clear Sans'
   links: 'Trebuchet MS'
+  color_main: '#fff'
+  color_secondary: '#d9d9d9'
 #in_prod:            false   #Set this to false remove most blogging functionality; making it mostly just a landing page
 #tiled_bg:           false   # Set this true if you want to tile your background image, otherwise it will be covered
 #locale:             en_US

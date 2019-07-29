@@ -10,7 +10,8 @@ categories:
         url: http://johnho.ca/startpage/
       - name:
         url:
-  - name: Links Example
+  - name: Links Example (you can use font awesome too)
+    icon: fa-external-link
     links:
       - name: GMail
         url: http://mail.google.com

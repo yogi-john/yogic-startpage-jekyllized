@@ -59,6 +59,7 @@ $ bundle exec jekyll serve --watch    # the watch flag looks for real-time chang
 go to [`localhost:4000`][6] in your browser to see your site.
 
 ### To-Do
+- [ ] get rid of settings.js (i.e. move search engine config and search placeholder into a data `yml` file)
 - [ ] get average color and set font to contrast
 - [ ] make it responsive
 - [ ] fix weather function
