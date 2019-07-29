@@ -197,7 +197,7 @@ $(document).ready(function() {
 	    //\ use first file in the list as default
 	    console.log('Multiple links provided; using '+ link_path +' as default.');
 	}
-	$.get( link_path, ProcessLinks, 'text');
-	window.ProcessLinks = ProcessLinks;
+	// $.get( link_path, ProcessLinks, 'text');
+	// window.ProcessLinks = ProcessLinks;
 	//\ give the function ProcessLinks() global scope
 });
