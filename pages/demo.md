@@ -3,6 +3,9 @@ layout: default
 title: Demo Page 2
 description: Some More Links!
 background: https://source.unsplash.com/collection/407887
+fonts:
+  color_main: '#43e8d8'
+  color_secondary: '#b3ecec'
 categories:
   - name: About
     links:

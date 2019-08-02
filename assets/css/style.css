@@ -1,5 +1,16 @@
 ---
 ---
+
+/* Setup Colors from config */
+{% assign color_main = site.fonts.color_main %}
+{% assign color_secondary = site.fonts.color_secondary %}
+{% if page.fonts.color_main %}
+	{% assign color_main = page.fonts.color_main %}
+{% endif %}
+{% if page.fonts.color_secondary %}
+	{% assign color_secondary = page.fonts.color_secondary %}
+{% endif %}
+
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
@@ -168,8 +179,8 @@ a:active{
 #bm ul{
 	float:left;
 	width:22%;
-	border-left:1px solid {{ site.fonts.color_main}};
-	color:{{ site.fonts.color_main }};
+	border-left:1px solid {{ color_main}};
+	color:{{ color_main }};
 	padding:6px;
 	margin-bottom:6px;
 }
@@ -203,7 +214,7 @@ a:active{
 	//float: right;
 	width: 100%;
 	// border-left:1px solid #fff;
-	color:{{ site.fonts.color_main}};
+	color:{{ color_main}};
 	padding:6px;
 	//margin-bottom:6px;
 	//margin-right: 5%;
@@ -267,7 +278,7 @@ a:active{
 	width:75%;
 	outline: none;
 	border:none;
-	border-bottom:1px solid {{ site.fonts.color_main }};
+	border-bottom:1px solid {{ color_main }};
 	background:none;
 	padding: 1%;
 	padding-top:0%;
@@ -318,17 +329,17 @@ a:active,
 a:visited,
 .weatherDetail, .weatherHead,
 #fulltime{
-	color:{{ site.fonts.color_main}};
+	color:{{ color_main}};
 }
 #bm li a, #menu li a{
-	color:{{ site.fonts.color_secondary }};
+	color:{{ color_secondary }};
 }
 #bm li a:hover, #menu li a:hover{
-	color:{{ site.fonts.color_main }};
+	color:{{ color_main }};
 }
 #search .sub li a{
 	color:#a5a5a5;
 }
 #search .sub li a:hover{
-	color:{{ site.fonts.color_main }};
+	color:{{ color_main }};
 }
