@@ -7,7 +7,7 @@ iam [at] johnho.ca
 \*==========*/
 var settings = {
     //"links_path" : "links.txt",
-    
+
     "links_path" : ["links/gtd.txt","links/personal.txt","links/dev.txt","links/yoga.txt","links/trading.txt","links/keepmoving.txt","links/rmotr.txt", "links/accelerate.txt", "links/jobs.txt","links/music.txt"],
     //\_added support for mulitple links pages
     //  tried using JS to parse all the files in the links directory but that's not possible in JS
@@ -33,7 +33,7 @@ var settings = {
 	"toUpper": false
 	//\_ should links and search engine label be all uppercase?
     },
-    
+
     "icons": {
 	"showIcons": false
     },
@@ -49,7 +49,7 @@ var settings = {
 	"link":"http://wttr.in"
 	//\ optional link for weather to a 3rd party app
     },
-    
+
     "background": {
 	"source":{
 	    "baseUrl": "https://source.unsplash.com/collection/",
@@ -61,19 +61,19 @@ var settings = {
 	"daily": false
 	//\_ should background picture in each collection be only updated once per day?
     },
-	
+
     "search": {
 	"engines": [// format is [search url, search varible name (different for each site), label to be shown]
-		    ["http://google.com/search", "q","GOOGLE"],
-		    ["http://images.google.com/search", "q","GImg"],
-		    ["http://google.com/maps", "q", "GMap"],
-		    ["http://google.com/news", "q", "GNews"],
-		    ["http://youtube.com/results", "search_query", "YouTube"],
-		    ["http://soundcloud.com/search/sounds", "q", "SoundCloud"],
-		    ["http://bing.com/search", "q", "Bing"],
-		    ["http://github.com/search", "q", "GitHub"],
-		    ["http://duckduckgo.com/", "q", "DuckDuckGo"],
-		    ["http://wolframalpha.com/input/", "i", "WolframAlpha"]
+		    ["https://google.com/search", "q","GOOGLE"],
+		    ["https://images.google.com/search", "q","GImg"],
+		    ["https://google.com/maps", "q", "GMap"],
+		    ["https://google.com/news", "q", "GNews"],
+		    ["https://youtube.com/results", "search_query", "YouTube"],
+		    ["https://soundcloud.com/search/sounds", "q", "SoundCloud"],
+		    ["https://bing.com/search", "q", "Bing"],
+		    ["https://github.com/search", "q", "GitHub"],
+		    ["https://duckduckgo.com/", "q", "DuckDuckGo"],
+		    ["https://wolframalpha.com/input/", "i", "WolframAlpha"]
 		    ],
 	"focusSearch": true,
 	//\_ should the search box be selected on load?
