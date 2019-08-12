@@ -14,8 +14,10 @@
       <div id="wrapper">
         {% include header.html %}
 
-        {% include _menu.html %}
-
+        {% if site.menu_list.show %}
+          {% include _menu.html %}
+        {% endif %}
+        
         {% include _links.html %}
 
         {% include _search.html %}
