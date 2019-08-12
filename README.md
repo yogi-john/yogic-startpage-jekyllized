@@ -58,6 +58,9 @@ $ bundle exec jekyll serve --watch    # the watch flag looks for real-time chang
 ```
 go to [`localhost:4000`][6] in your browser to see your site.
 
+## Gitlab
+For deployment on **GitLab**, this repo already include a `.gitlab-ci.yml` file that should build the *GitLab Page* properly. I found [this page](https://bftsystems.ca/moving-from-github-to-gitlab-pages/) to be particularly useful on using GitLab Pages.
+
 ### To-Do
 - [ ] get rid of settings.js (i.e. move search engine config and search placeholder into a data `yml` file)
 - [ ] get average color and set font to contrast
